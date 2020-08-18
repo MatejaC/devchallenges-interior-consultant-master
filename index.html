@@ -9,41 +9,46 @@
 </head>
 
 <body>
- <header class="top-bar" hidden>
+ <div class="container">
+  <header class="top-bar" hidden>
+   <h3 class="this-interior">This interior</h3>
+   <div class="top-bar-page-content">
+    <a href="#">About</a>
+    <a href="#">Collection</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+   </div>
+  </header>
+  <div id="myNav" class="overlay visible-phone" role="navigation">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   <div class="overlay-content">
+    <a href="#">Home</a>
+    <a href="#">Collection</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+   </div>
+  </div>
+
   <h3 class="this-interior">This interior</h3>
-  <div class="top-bar-page-content">
-   <a href="#">About</a>
-   <a href="#">Collection</a>
-   <a href="#">About</a>
-   <a href="#">Contact</a>
-  </div>
- </header>
- <div id="myNav" class="overlay visible-phone" role="navigation">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
-   <a href="#">About</a>
-   <a href="#">Collection</a>
-   <a href="#">About</a>
-   <a href="#">Contact</a>
-  </div>
+  <span onclick="openNav()" class="hamburger-icon">&#9776;</span>
+
+  <h1 class="title">Modern interior</h1>
+  <h4 class="description">A full-Service residental & commercial interior design and staging company offering
+   professional organizing & eco
+   services. </h4>
+
+  <h4 class="read-more">Read more</h4>
+
+  <img src="assets/photo1.png" class="interor-image" alt="interior design img">
+  <section class="card">
+   <img src="assets/photo2.png" alt="Aliza Webber">
+   <h5>Aliza Webber</h5>
+   <h6>Interior designer</h6>
+   <h3>Designed in 2020 by Aliza Webber </h3>
+  </section>
+
  </div>
 
- <h3 class="this-interior">This interior</h3>
- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
- <h1>Modern interior</h1>
- <h4>A full-Service residental & commercial interior design and staging company offering professional organizing & eco
-  services. </h4>
-
- <h4 class="read-more">Read more</h4>
-
- <img src="assets/photo1.png" class="interor-image" alt="interior design img">
- <section class="card">
-  <img src="assets/photo2.png" alt="Aliza Webber">
-  <h5>Aliza Webber</h5>
-  <h6>Interior designer</h6>
-  <h3>Designed in 2020 by Aliza Webber </h3>
- </section>
  <script>
   function openNav() {
    document.getElementById("myNav").style.width = "100%";
