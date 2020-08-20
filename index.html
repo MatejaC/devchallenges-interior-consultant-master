@@ -2,66 +2,69 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" type="text/css" href="/devchallenges-interior-consultant-master/scss/style.css" />
- <title>Interior Consultant</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/devchallenges-interior-consultant-master/scss/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=PT+Serif:wght@400;700&family=Poppins:wght@300;400&display=swap"
+    rel="stylesheet">
+  <title>Interior Consultant</title>
 </head>
 
 <body>
- <div class="container">
-  <header class="top-bar" hidden>
-   <h3 class="this-interior">This interior</h3>
-   <div class="top-bar-page-content">
-    <a href="#">About</a>
-    <a href="#">Collection</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-   </div>
-  </header>
-  <div id="myNav" class="overlay visible-phone" role="navigation">
-   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-   <div class="overlay-content">
-    <a href="#">Home</a>
-    <a href="#">Collection</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-   </div>
+  <div class="container">
+    <header class="top-bar" hidden>
+      <h3 class="this-interior">This interior</h3>
+      <div class="top-bar-page-content">
+        <a href="#">About</a>
+        <a href="#">Collection</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </header>
+    <div id="myNav" class="overlay visible-phone" role="navigation">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <a href="#">Home</a>
+        <a href="#">Collection</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <h3 class="this-interior">This interior</h3>
+    <span onclick="openNav()" class="hamburger-icon">&#9776;</span>
+
+    <h1 class="title">Modern interior</h1>
+    <h4 class="description">A full-Service residental & commercial interior design and staging company offering
+      professional organizing & <br> eco
+      services. </h4>
+
+    <h4 class="read-more">Read more</h4>
+
+    <img src="assets/photo1.png" class="interor-image" alt="interior design img">
+    <section class="card floating colored">
+      <img class="Aliza-photo" src="assets/photo2.png" alt="Aliza Webber">
+      <h6 class="nameA">Aliza Webber</h6>
+      <h6 class="occupation">Interior designer</h6>
+      <h5 class="designed-by">Designed in 2020 by Aliza Webber </h5>
+    </section>
+
+    <hr class="line">
+    <footer><a href="https://github.com/MatejaC/devchallenges-interior-consultant-master">Mateja Cimpersak @
+        DevChallenges.io</a></footer>
+
   </div>
 
-  <h3 class="this-interior">This interior</h3>
-  <span onclick="openNav()" class="hamburger-icon">&#9776;</span>
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
 
-  <h1 class="title">Modern interior</h1>
-  <h4 class="description">A full-Service residental & commercial interior design and staging company offering
-   professional organizing & eco
-   services. </h4>
-
-  <h4 class="read-more">Read more</h4>
-
-  <img src="assets/photo1.png" class="interor-image" alt="interior design img">
-  <section class="card">
-   <img class="Aliza-photo" src="assets/photo2.png" alt="Aliza Webber">
-   <h6 class="nameA">Aliza Webber</h6>
-   <h6 class="occupation">Interior designer</h6>
-   <h5 class="designed-by">Designed in 2020 by Aliza Webber </h5>
-  </section>
-
-  <hr class="line">
-  <footer><a href="https://github.com/MatejaC/devchallenges-interior-consultant-master">Mateja Cimpersak @
-    DevChallenges.io</a></footer>
-
- </div>
-
- <script>
-  function openNav() {
-   document.getElementById("myNav").style.width = "100%";
-  }
-
-  function closeNav() {
-   document.getElementById("myNav").style.width = "0%";
-  }
- </script>
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
 
 </body>
 
