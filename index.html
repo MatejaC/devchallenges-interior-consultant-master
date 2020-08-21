@@ -13,20 +13,20 @@
 
 <body>
   <div class="container">
-    <header class="top-bar" hidden>
-      <h3 class="this-interior">This interior</h3>
-      <div class="top-bar-page-content">
-        <a href="#">About</a>
-        <a href="#">Collection</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </div>
-    </header>
-    <div id="myNav" class="overlay visible-phone" role="navigation">
+    <h3 class="this-interior">This interior</h3>
+    <div class="top-bar-page-content">
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div id="myNav" class="overlay" role="navigation">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
         <img src="assets/close-white-24dp.svg">
       </a>
-      <div class=" overlay-content">
+      <div class="overlay-content">
         <a href="#">Home</a>
         <a href="#">Collection</a>
         <a href="#">About</a>
@@ -34,7 +34,6 @@
       </div>
     </div>
 
-    <h3 class="this-interior">This interior</h3>
     <span onclick="openNav()" class="hamburger-icon"><img src="assets/menu-white-24dp.svg"></span>
 
     <h1 class="title">Modern interior</h1>
