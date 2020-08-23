@@ -320,7 +320,7 @@ footer {
   grid-row: row 1;
   font-family: $fontMontserrat;
   font-size: 0.7rem;
-  margin: 2rem 0rem 5rem 0.8rem;
+  margin: 2rem 0rem 5rem -0.5;
   color: $color;
   background-color: $background-color;
   ul {
@@ -373,9 +373,9 @@ footer {
   grid-row: row 3;
   font-family: $fontMontserrat;
   font-weight: 300;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: $whitish;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.01rem;
   line-height: 0.9rem;
   margin: 0rem 0 1rem 2.6rem;
  }
