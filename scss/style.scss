@@ -1,23 +1,127 @@
 // variables
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;400&family=Lora:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap");
 
 $fontMontserrat: "Montserrat", sans-serif;
-$fontPT: "PT Serif", serif;
-$background-color: rgba(0, 0, 0, 0.961);
-$whitish: rgba(255, 255, 255, 0.7);
-$grey-soft: rgb(212, 212, 212);
-$color: #ffffff;
+$fontLora: "Lora", serif;
+$fontCrimsonPro: "Crimson Pro", serif;
+$background-color: #181719;
+$white: #ffffff;
+$grayOccupation: #828282;
+$grayHamburger: #f2f2f2;
+$colorLine: #a9a9a9;
+$colorFooter: #a9a9a9;
 $overlay-link: #e9e8e8;
 $overlay-hover: #8f8b8b;
 
 // base styles
+
 *,
 *::before,
 *::after {
- -moz-box-sizing: border-box;
- -webkit-box-sizing: border-box;
  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+hr {
  margin: 0;
  padding: 0;
+ border: 0;
+}
+
+.clearfix {
+ zoom: 1;
+}
+
+body {
+ background-color: $background-color;
+ overflow-x: hidden;
+}
+
+html {
+ box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+ box-sizing: inherit;
 }
 
 .clearfix {
@@ -33,262 +137,16 @@ $overlay-hover: #8f8b8b;
  width: device-width;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-:not(hr) {
- color: $color;
-}
-
-.row {
- position: relative;
-}
-
-.row::after {
- content: "";
- display: block;
- clear: both;
-}
-
 // mobile
-.container {
- display: grid;
- grid-template-columns: repeat(8, 1fr);
- grid-template-rows: repeat(10, [row] auto);
- background-color: $background-color;
-}
-
-.this-interior {
- display: inline-block;
- position: relative;
- grid-column: 1 / 3;
- grid-row: row 1;
- font-family: $fontPT;
- color: $whitish;
- font-weight: 400;
- letter-spacing: 0.01rem;
- text-align: center;
- align-items: center;
- line-height: 1.5rem;
- width: 5.5rem;
- height: 1.7rem;
- padding: 0.05rem;
- font-size: 0.6rem;
- margin: 0.8rem 0 2rem 0.5rem;
- text-transform: uppercase;
- border: 1px solid $whitish;
- box-sizing: border-box;
-}
-.top-bar-page-content {
- display: none;
-}
-.hamburger-icon {
- display: inline-block;
- position: relative;
- grid-column: 8;
- grid-row: row 1;
- font-size: 2rem;
- cursor: pointer;
- margin: 0.4rem 0rem 0rem 0.5rem;
-}
-
-.title {
- display: inline-block;
- position: relative;
- grid-column: 1 / 8;
- grid-row: row 2;
- font-family: $fontPT;
- letter-spacing: 0.05rem;
- font-size: 1.5rem;
- font-weight: 400;
- margin: 0 0 1rem 0.5rem;
-}
-
-.description {
- display: inline-block;
- position: relative;
- grid-column: 1 / 6;
- grid-row: row 3;
- font-family: $fontMontserrat;
- font-weight: 300;
- font-size: 0.7rem;
- line-height: 0.9rem;
- color: $whitish;
- letter-spacing: 0.05rem;
- margin: 0rem 0 1rem 0.5rem;
-}
-
-.read-more {
- display: inline-block;
- position: relative;
- grid-column: 1 / 4;
- grid-row: row 4;
- margin: 0rem 0 2rem 0.5rem;
- font-family: $fontMontserrat;
- font-size: 0.6rem;
- font-weight: 600;
- letter-spacing: 0.02rem;
- text-decoration: none;
- a:link,
- a:hover {
-  color: $overlay-link;
-  text-decoration: none;
- }
-}
-.arrow {
- display: inline-block;
- position: relative;
- grid-column: 2;
- grid-row: row 4;
- margin: -0.1rem 0 1rem 2rem;
- font-size: 0.6rem;
-}
-
-.interor-image {
- display: inline-block;
- position: relative;
- text-align: center;
- align-items: center;
- line-height: 100%;
- width: 100%;
- max-width: 100ch;
- grid-column: 2 / 9;
- grid-row: row 5 / 9;
- margin: 0 1rem 0 -1.2rem;
- z-index: 1;
-}
-
-.card {
- position: relative;
- display: block;
- grid-column: 2/ -2;
- grid-row: row 8 / -1;
- display: grid;
- grid-template-columns: repeat(4, 1fr);
- border: none;
- box-sizing: border-box;
- background-color: $background-color;
- padding: 0.55rem;
- margin: 1.2rem -0.6rem 2rem 0.4rem;
- // box-shadow: 0px 7px 7px 2px black, 0px 0px 0px 0px rgba(0, 0, 0, 0.902);
- box-shadow: 0 8px 6px -6px black;
- z-index: 2;
-}
-.Aliza-photo {
- grid-column: 1 / 2;
- grid-row: 1 / 3;
- width: 100%;
- max-width: 100ch;
- border-radius: 50%;
- padding: 0.8rem;
- margin: -0.5rem 0rem 0.6rem 0rem;
-}
-.nameA {
- grid-column: 2 / 5;
- grid-row: 1;
- font-family: $fontMontserrat;
- font-size: 0.65rem;
- font-weight: 400;
- margin: 0.5rem 0rem -0.7rem 0.4rem;
- letter-spacing: 0.04rem;
-}
-.occupation {
- grid-column: 2 / 5;
- grid-row: 2;
- font-size: 0.6rem;
- margin: -0.6rem 0rem 0rem 0.4rem;
- font-family: $fontMontserrat;
- color: grey;
- font-weight: 400;
- letter-spacing: 0.01rem;
-}
-.designed-by {
- grid-column: 1 / 4;
- grid-row: 3;
- font-size: 0.9rem;
- font-family: $fontPT;
- margin: -0.5rem 0rem 1rem 0.5rem;
-}
-
-.line {
- grid-column: 2 / 8;
- grid-row: row 11;
- margin: 1rem 0 0.7rem 0;
- text-align: center;
- align-items: center;
- border-top: 0.1rem grey;
-}
-footer {
- grid-column: 1 / 9;
- grid-row: row 12;
- font-family: $fontMontserrat;
- font-weight: 700;
- font-size: 0.6rem;
- text-align: center;
- align-items: center;
- color: grey;
- margin: 0rem 0 1rem 0;
- a:link {
-  text-decoration: none;
-  color: $whitish;
- }
- a {
-  color: inherit;
- }
-}
-
-.overlay {
- height: 100%;
- width: 0;
- position: fixed;
- z-index: 3;
- top: 0;
- left: 0;
- background-color: $background-color;
- overflow-x: hidden;
- transition: 0.5s;
-}
-
-.overlay-content {
- position: relative;
- top: 25%;
- width: 100%;
- text-align: center;
- margin-top: 1.5rem;
-}
-
-.overlay a {
- padding: 0.8rem;
- text-decoration: none;
- font-size: 1.5rem;
- color: $whitish;
- display: block;
- transition: 0.3s;
-}
-
-.overlay a:hover,
-.overlay a:focus {
- color: $overlay-hover;
-}
-
-.overlay .closebtn {
- position: absolute;
- top: 0.4rem;
- right: 0.5rem;
- font-size: 2rem;
-}
-
-// tablets
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (max-device-width: 677.9px) {
  .container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(10, [row] auto);
   background-color: $background-color;
+  max-width: 375px;
+  margin: 1rem auto;
+  padding: 0rem;
  }
 
  .this-interior {
@@ -296,20 +154,259 @@ footer {
   position: relative;
   grid-column: 1 / 3;
   grid-row: row 1;
-  font-family: $fontPT;
-  color: $whitish;
-  font-weight: 400;
-  letter-spacing: 0.01rem;
+  font-family: $fontCrimsonPro;
+  color: $white;
+  font-weight: 200;
   text-align: center;
   align-items: center;
-  line-height: 1.5rem;
-  width: 5.2rem;
-  height: 1.5rem;
-  padding: 0rem;
-  font-size: 0.58rem;
-  margin: 2rem 0 5rem 2.5rem;
+  width: 6.4rem;
+  height: 1.93rem;
+  padding: 0.4rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin: 0rem 0 0rem 0.5rem;
   text-transform: uppercase;
-  border: 1px solid $whitish;
+  border: 1px solid $white;
+  box-sizing: border-box;
+ }
+
+ .top-bar-page-content {
+  display: none;
+ }
+
+ .hamburger-icon {
+  display: inline-block;
+  position: relative;
+  grid-column: 8;
+  grid-row: row 1;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0rem 0rem 0rem 0.5rem;
+  color: $grayHamburger;
+ }
+
+ .title {
+  display: inline-block;
+  position: relative;
+  grid-column: 1 / 8;
+  grid-row: row 2;
+  font-family: $fontLora;
+  color: $white;
+  font-size: 2.25rem;
+  line-height: 2.875;
+  font-weight: normal;
+  margin: 0 0 0rem 0.5rem;
+ }
+
+ .description {
+  display: inline-block;
+  position: relative;
+  grid-column: 1 / 6;
+  grid-row: row 3;
+  font-family: $fontMontserrat;
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 1.06rem;
+  color: $white;
+  letter-spacing: 0.05rem;
+  margin: 0rem 0 1rem 0.5rem;
+  max-width: 250px;
+ }
+
+ .read-more {
+  display: inline-block;
+  position: relative;
+  grid-column: 1 / 4;
+  grid-row: row 4;
+  margin: 0rem 0 2rem 0.5rem;
+  font-family: $fontMontserrat;
+  color: $white;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+ }
+
+ .arrow {
+  display: inline-block;
+  position: relative;
+  grid-column: 2;
+  grid-row: row 4;
+  margin: -0.1rem 0 1rem 2rem;
+  font-size: 0.6rem;
+ }
+
+ .interor-image {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  line-height: 100%;
+  width: 100%;
+  max-width: 100ch;
+  grid-column: 2 / 9;
+  grid-row: row 5 / 9;
+  margin: 0 1rem 0 -1.2rem;
+  z-index: 1;
+ }
+
+ .card {
+  position: relative;
+  display: block;
+  grid-column: 2/ -2;
+  grid-row: row 8 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: none;
+  box-sizing: border-box;
+  background-color: $background-color;
+  padding: 0.55rem;
+  margin: 1.2rem -0.6rem 2rem 0.4rem;
+  // box-shadow: 0px 7px 7px 2px black, 0px 0px 0px 0px rgba(0, 0, 0, 0.902);
+  box-shadow: 0 8px 6px -6px black;
+  z-index: 2;
+ }
+
+ .Aliza-photo {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  width: 100%;
+  max-width: 100ch;
+  border-radius: 50%;
+  padding: 0.8rem;
+  margin: -0.5rem 0rem 0.6rem 0rem;
+ }
+
+ .nameA {
+  grid-column: 2 / 5;
+  grid-row: 1;
+  font-family: $fontMontserrat;
+  color: $white;
+  font-size: 0.65rem;
+  font-weight: 400;
+  margin: 0.5rem 0rem -0.7rem 0.4rem;
+  letter-spacing: 0.04rem;
+ }
+
+ .occupation {
+  grid-column: 2 / 5;
+  grid-row: 2;
+  font-size: 0.6rem;
+  margin: -0.6rem 0rem 0rem 0.4rem;
+  font-family: $fontMontserrat;
+  color: $grayOccupation;
+  font-weight: 400;
+  letter-spacing: 0.01rem;
+ }
+
+ .designed-by {
+  grid-column: 1 / 4;
+  grid-row: 3;
+  font-size: 0.9rem;
+  font-family: $fontLora;
+  color: $white;
+  margin: -0.5rem 0rem 1rem 0.5rem;
+ }
+
+ .line {
+  grid-column: 2 / 8;
+  grid-row: row 11;
+  margin: 1rem 0 0.7rem 0;
+  text-align: center;
+  align-items: center;
+  border-top: 0.1rem $colorLine;
+ }
+
+ footer {
+  grid-column: 1 / 9;
+  grid-row: row 12;
+  font-family: $fontMontserrat;
+  font-weight: 700;
+  font-size: 0.6rem;
+  text-align: center;
+  align-items: center;
+  color: $colorFooter;
+  margin: 0rem 0 1rem 0;
+  a:link {
+   text-decoration: none;
+   color: $white;
+  }
+  a {
+   color: inherit;
+  }
+ }
+
+ .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: $background-color;
+  overflow-x: hidden;
+  transition: 0.5s;
+ }
+
+ .overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5rem;
+ }
+
+ .overlay a {
+  padding: 0.8rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: $white;
+  display: block;
+  transition: 0.3s;
+ }
+
+ .overlay a:hover,
+ .overlay a:focus {
+  color: $overlay-hover;
+ }
+
+ .overlay .closebtn {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.5rem;
+  font-size: 2rem;
+ }
+}
+
+// tablets
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023.9px) {
+ .container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(10, [row] auto);
+  background-color: $background-color;
+  max-width: 768px;
+  margin: 1rem auto;
+  padding: 0rem;
+ }
+
+ .this-interior {
+  display: inline-block;
+  position: relative;
+  grid-column: 1 / 3;
+  grid-row: row 1;
+  font-family: $fontCrimsonPro;
+  color: $white;
+  font-weight: 200;
+  text-align: center;
+  align-items: center;
+  width: 6.4rem;
+  height: 1.9rem;
+  padding: 0rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin: 1rem 0 5rem 2.5rem;
+  text-transform: uppercase;
+  border: 1px solid $white;
   box-sizing: border-box;
  }
 
@@ -321,7 +418,7 @@ footer {
   font-family: $fontMontserrat;
   font-size: 0.7rem;
   margin: 2rem 0rem 5rem -0.5rem;
-  color: $color;
+  color: $white;
   background-color: $background-color;
   ul {
    list-style-type: none;
@@ -339,7 +436,7 @@ footer {
   li a {
    display: block;
    background-color: $background-color;
-   color: $color;
+   color: $white;
    text-align: center;
    padding: 0.5rem 1.5rem;
    text-decoration: none;
@@ -360,7 +457,8 @@ footer {
   position: relative;
   grid-column: 1 / 4;
   grid-row: row 2;
-  font-family: $fontPT;
+  font-family: $fontLora;
+  color: $white;
   font-size: 1.55rem;
   font-weight: 400;
   margin: -0.2rem 0 1.2rem 2.5rem;
@@ -374,7 +472,7 @@ footer {
   font-family: $fontMontserrat;
   font-weight: 300;
   font-size: 0.8rem;
-  color: $whitish;
+  color: $white;
   letter-spacing: 0.01rem;
   line-height: 0.9rem;
   margin: 0rem 0 1rem 2.6rem;
@@ -387,6 +485,7 @@ footer {
   grid-row: row 4;
   margin: 0rem 0 1rem 2.5rem;
   font-family: $fontMontserrat;
+  color: $white;
   font-size: 0.65rem;
   letter-spacing: 0.02rem;
  }
@@ -398,6 +497,7 @@ footer {
   grid-row: row 4;
   margin: -0.1rem 0 0rem 0.7rem;
   font-size: 0.7rem;
+  color: $white;
  }
 
  .interor-image {
@@ -439,7 +539,7 @@ footer {
  .nameA {
   grid-column: 2 / 5;
   grid-row: 1;
-  color: $color;
+  color: $white;
   font-family: $fontMontserrat;
   font-size: 0.6rem;
   font-weight: 400;
@@ -452,7 +552,7 @@ footer {
   font-size: 0.55rem;
   margin: -0.6rem 0rem 0rem 0.4rem;
   font-family: $fontMontserrat;
-  color: $overlay-hover;
+  color: $grayOccupation;
   font-weight: 400;
   letter-spacing: 0rem;
  }
@@ -460,7 +560,8 @@ footer {
   grid-column: 1 / 4;
   grid-row: 3;
   font-size: 0.9rem;
-  font-family: $fontPT;
+  font-family: $fontLora;
+  color: $white;
   margin: -0.5rem 0rem 1rem 0.5rem;
  }
 
@@ -472,6 +573,7 @@ footer {
   grid-column: 1 / 9;
   grid-row: row 8;
   font-family: $fontMontserrat;
+  color: $colorFooter;
   font-size: 0.5rem;
   margin: 1.8rem 0 1.5rem 0;
   a:link {
@@ -506,12 +608,15 @@ footer {
 }
 
 // laptops
-@media screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-device-width: 1024px) {
  .container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(10, [row] auto);
   background-color: $background-color;
+  max-width: 1024px;
+  margin: 1rem auto;
+  padding: 0rem;
  }
 
  .this-interior {
@@ -519,8 +624,8 @@ footer {
   position: relative;
   grid-column: 1 / 3;
   grid-row: row 1;
-  font-family: $fontPT;
-  color: $whitish;
+  font-family: $fontCrimsonPro;
+  color: $white;
   font-weight: 400;
   letter-spacing: 0.01rem;
   text-align: center;
@@ -532,7 +637,7 @@ footer {
   font-size: 0.58rem;
   margin: 2rem 0 5rem 3rem;
   text-transform: uppercase;
-  border: 1px solid $whitish;
+  border: 1px solid $white;
   box-sizing: border-box;
  }
 
@@ -544,7 +649,7 @@ footer {
   font-family: $fontMontserrat;
   font-size: 0.8rem;
   margin: 2rem 0rem 5rem 4.5rem;
-  color: $color;
+  color: $white;
   background-color: $background-color;
   ul {
    list-style-type: none;
@@ -562,7 +667,7 @@ footer {
   li a {
    display: block;
    background-color: $background-color;
-   color: $color;
+   color: $white;
    text-align: center;
    padding: 0.5rem 1.5rem;
    text-decoration: none;
@@ -583,7 +688,8 @@ footer {
   position: relative;
   grid-column: 1 / 4;
   grid-row: row 2;
-  font-family: $fontPT;
+  font-family: $fontLora;
+  color: $white;
   font-size: 2.1rem;
   font-weight: 400;
   margin: -0.6rem 0 1.9rem 3rem;
@@ -597,7 +703,7 @@ footer {
   font-family: $fontMontserrat;
   font-weight: 300;
   font-size: 1rem;
-  color: $whitish;
+  color: $white;
   letter-spacing: 0.01rem;
   line-height: 1.4rem;
   margin: 0rem 2.2rem 1.8rem 3rem;
@@ -610,6 +716,7 @@ footer {
   grid-row: row 4;
   margin: 0rem 0 1rem 3rem;
   font-family: $fontMontserrat;
+  color: $white;
   font-size: 0.75rem;
   letter-spacing: 0.02rem;
  }
@@ -621,6 +728,7 @@ footer {
   grid-row: row 4;
   margin: -0.01rem 0 0 0;
   font-size: 0.7rem;
+  color: $white;
  }
 
  .interor-image {
@@ -662,7 +770,7 @@ footer {
  .nameA {
   grid-column: 2 / 5;
   grid-row: 1;
-  color: $color;
+  color: $white;
   font-family: $fontMontserrat;
   font-size: 0.8rem;
   font-weight: 400;
@@ -675,7 +783,7 @@ footer {
   font-size: 0.7rem;
   margin: -0.6rem 0rem 0rem 0.5rem;
   font-family: $fontMontserrat;
-  color: $overlay-hover;
+  color: $grayOccupation;
   font-weight: 400;
   letter-spacing: 0rem;
  }
@@ -683,7 +791,8 @@ footer {
   grid-column: 1 / 4;
   grid-row: 3;
   font-size: 1.15rem;
-  font-family: $fontPT;
+  font-family: $fontLora;
+  color: $white;
   margin: 0rem 0rem 1rem 0.7rem;
  }
 
@@ -697,6 +806,7 @@ footer {
   font-family: $fontMontserrat;
   font-size: 0.5rem;
   margin: 1.8rem 0 1.5rem 0;
+  color: $colorFooter;
   a:link {
    text-decoration: none;
    color: grey;
@@ -728,12 +838,15 @@ footer {
  }
 }
 
-@media screen and (min-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-device-width: 1440px) {
  .container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(10, [row] auto);
   background-color: $background-color;
+  max-width: 1440px;
+  margin: 1rem auto;
+  padding: 0rem;
  }
 
  .this-interior {
@@ -741,8 +854,8 @@ footer {
   position: relative;
   grid-column: 1 / 3;
   grid-row: row 1;
-  font-family: $fontPT;
-  color: $whitish;
+  font-family: $fontCrimsonPro;
+  color: $white;
   font-weight: 400;
   letter-spacing: 0.01rem;
   text-align: center;
@@ -754,7 +867,7 @@ footer {
   font-size: 0.58rem;
   margin: 2rem 0 5rem 5rem;
   text-transform: uppercase;
-  border: 1px solid $whitish;
+  border: 1px solid $white;
   box-sizing: border-box;
  }
 
@@ -766,7 +879,7 @@ footer {
   font-family: $fontMontserrat;
   font-size: 1rem;
   margin: 2rem 0rem 5rem 13rem;
-  color: $color;
+  color: $white;
   background-color: $background-color;
   ul {
    list-style-type: none;
@@ -784,7 +897,7 @@ footer {
   li a {
    display: block;
    background-color: $background-color;
-   color: $color;
+   color: $white;
    text-align: center;
    padding: 0.5rem 1.5rem;
    text-decoration: none;
@@ -805,7 +918,8 @@ footer {
   position: relative;
   grid-column: 1 / 4;
   grid-row: row 2;
-  font-family: $fontPT;
+  font-family: $fontLora;
+  color: $white;
   font-size: 2.55rem;
   font-weight: 400;
   margin: -0.2rem 0 1.2rem 5rem;
@@ -819,7 +933,7 @@ footer {
   font-family: $fontMontserrat;
   font-weight: 300;
   font-size: 1.3rem;
-  color: $whitish;
+  color: $white;
   letter-spacing: 0.01rem;
   line-height: 1.6rem;
   margin: 1rem 0 2rem 5rem;
@@ -832,6 +946,7 @@ footer {
   grid-row: row 4;
   margin: 0rem 0 1rem 5rem;
   font-family: $fontMontserrat;
+  color: $white;
   font-size: 0.8rem;
   letter-spacing: 0.02rem;
  }
@@ -884,7 +999,7 @@ footer {
  .nameA {
   grid-column: 2 / 5;
   grid-row: 1;
-  color: $color;
+  color: $white;
   font-family: $fontMontserrat;
   font-size: 0.6rem;
   font-weight: 400;
@@ -897,7 +1012,7 @@ footer {
   font-size: 0.55rem;
   margin: -0.6rem 0rem 0rem 0.4rem;
   font-family: $fontMontserrat;
-  color: $overlay-hover;
+  color: $grayOccupation;
   font-weight: 400;
   letter-spacing: 0rem;
  }
@@ -905,7 +1020,8 @@ footer {
   grid-column: 1 / 4;
   grid-row: 3;
   font-size: 0.9rem;
-  font-family: $fontPT;
+  font-family: $fontLora;
+  color: $white;
   margin: -0.5rem 0rem 1rem 0.5rem;
  }
 
@@ -917,6 +1033,7 @@ footer {
   grid-column: 1 / 9;
   grid-row: row 8;
   font-family: $fontMontserrat;
+  color: $colorFooter;
   font-size: 0.5rem;
   margin: 1.8rem 0 1.5rem 0;
   a:link {
