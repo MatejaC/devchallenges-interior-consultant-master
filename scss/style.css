@@ -129,7 +129,7 @@ html {
   width: device-width;
 }
 
-@media only screen and (max-device-width: 677.9px) {
+@media only screen and (max-device-width: 767.9px) {
   .container {
     display: -ms-grid;
     display: grid;
@@ -167,7 +167,7 @@ html {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .top-bar-page-content {
+  .top-bar-list {
     display: none;
   }
   .hamburger-icon {
@@ -432,41 +432,21 @@ html {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .top-bar-page-content {
-    display: inline-block;
-    position: relative;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 4;
-    grid-column: 5 / 9;
-    grid-row: row 1;
+  .top-bar-list {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
     font-family: "Montserrat", sans-serif;
     font-size: 0.7rem;
     margin: 2rem 0rem 5rem -0.5rem;
     color: #ffffff;
     background-color: #181719;
-  }
-  .top-bar-page-content ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #181719;
-  }
-  .top-bar-page-content li {
-    background-color: #181719;
-    float: left;
-  }
-  .top-bar-page-content li a {
-    display: block;
-    background-color: #181719;
-    color: #ffffff;
-    text-align: center;
-    padding: 0.5rem 1.5rem;
-    text-decoration: none;
-    letter-spacing: 0.02rem;
-  }
-  .top-bar-page-content li a.active {
-    font-weight: 700;
   }
   .hamburger-icon {
     display: none;
@@ -680,41 +660,20 @@ html {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .top-bar-page-content {
-    display: inline-block;
+  .top-bar-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     position: relative;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 4;
-    grid-column: 5 / 9;
-    grid-row: row 1;
     font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
     margin: 2rem 0rem 5rem 4.5rem;
     color: #ffffff;
     background-color: #181719;
-  }
-  .top-bar-page-content ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #181719;
-  }
-  .top-bar-page-content li {
-    background-color: #181719;
-    float: left;
-  }
-  .top-bar-page-content li a {
-    display: block;
-    background-color: #181719;
-    color: #ffffff;
-    text-align: center;
-    padding: 0.5rem 1.5rem;
-    text-decoration: none;
-    letter-spacing: 0.02rem;
-  }
-  .top-bar-page-content li a.active {
-    font-weight: 700;
   }
   .hamburger-icon {
     display: none;
@@ -901,6 +860,7 @@ html {
     max-width: 1440px;
     margin: 1rem auto;
     padding: 0rem;
+    height: 100vh;
   }
   .this-interior {
     display: inline-block;
@@ -928,41 +888,22 @@ html {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .top-bar-page-content {
-    display: inline-block;
-    position: relative;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 4;
-    grid-column: 5 / 9;
-    grid-row: row 1;
+  .top-bar-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     margin: 2rem 0rem 5rem 13rem;
     color: #ffffff;
     background-color: #181719;
-  }
-  .top-bar-page-content ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #181719;
-  }
-  .top-bar-page-content li {
-    background-color: #181719;
-    float: left;
-  }
-  .top-bar-page-content li a {
-    display: block;
-    background-color: #181719;
-    color: #ffffff;
-    text-align: center;
-    padding: 0.5rem 1.5rem;
-    text-decoration: none;
-    letter-spacing: 0.02rem;
-  }
-  .top-bar-page-content li a.active {
-    font-weight: 700;
   }
   .hamburger-icon {
     display: none;
