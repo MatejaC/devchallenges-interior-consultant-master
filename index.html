@@ -2,68 +2,67 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="/devchallenges-interior-consultant-master/scss/style.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;400&family=Lora:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
-  <title>Interior Consultant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/devchallenges-interior-consultant-master/scss/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;400&family=Lora:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Interior Consultant</title>
 </head>
 
 <body>
-  <div class="container">
-    <p class="this-interior">This interior</p>
-    <div class="top-bar-list>
-      <p class="top-bar-list__item top-bar-list__item--active">Home</p>
-        <p class="top-bar-list__item">Collection</p>
-        <p class="top-bar-list__item">About</p>
-        <p class="top-bar-list__item">Contact</p>
-    </div>
-    <div id="myNav" class="overlay" role="navigation">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-        <img src="assets/close-white-24dp.svg">
-      </a>
-      <div class="overlay-content">
-        <a href="#">Home</a>
-        <a href="#">Collection</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </div>
-    </div>
+    <div class="container">
+        <header class="this-interior">
+            <p>This interior</p>
+        </header>
+        <div class="nav">
+            <p class="nav__item nav__item--active">Home</p>
+            <p class="nav__item">Collection</p>
+            <p class="nav__item">About</p>
+            <p class="nav__item">Contact</p>
+        </div>
+        <div id="myNav" class="overlay" role="navigation">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                <img src="assets/close-white-24dp.svg ">
+            </a>
+            <div class="overlay-content ">
+                <a href="#">Home</a>
+                <a href="#">Collection</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
 
-    <span onclick="openNav()" class="hamburger-icon"><img src="assets/menu-white-24dp.svg"></span>
+        <span onclick="openNav()" class="hamburger-icon"><img src="assets/menu-white-24dp.svg "></span>
 
-    <p class="title">Modern interior</p>
-    <p class="description">A full-Service residential & commercial interior design and staging company offering
-      professional organizing & <br> eco-services. </p>
+        <p class="title">Modern interior</p>
+        <p class="description">A full-Service residential & commercial interior design and staging company offering professional organizing & <br> eco-services. </p>
 
-    <p class="read-more">Read more</p>
-    <img class="arrow" src="assets/arrow_right_alt-white-18dp.svg">
+        <p class="read-more">Read more</p>
+        <img class="arrow" src="assets/arrow_right_alt-white-18dp.svg">
 
-    <img src="assets/photo1.png" class="interor-image" alt="interior design img">
-    <section class="card">
-      <img class="Aliza-photo" src="assets/photo2.png" alt="Aliza Webber">
-      <p class="nameA">Aliza Webber</p>
-      <p class="occupation">Interior designer</p>
-      <p class="designed-by">Designed in 2020 by <br> Aliza Webber </p>
-    </section>
+        <img src="assets/photo1.png" class="interor-image" alt="interior design img">
+        <section class="card">
+            <img class="Aliza-photo" src="assets/photo2.png" alt="Aliza Webber">
+            <p class="nameA">Aliza Webber</p>
+            <p class="occupation">Interior designer</p>
+            <p class="designed-by">Designed in 2020 by <br> Aliza Webber </p>
+        </section>
 
-    <hr class="line">
-    <footer><a href="https://github.com/MatejaC/devchallenges-interior-consultant-master">Mateja Cimpersak @
+        <hr class="line">
+        <footer><a href="https://github.com/MatejaC/devchallenges-interior-consultant-master ">Mateja Cimpersak @
         DevChallenges.io</a></footer>
 
-  </div>
+    </div>
 
-  <script>
-    function openNav() {
-      document.getElementById("myNav").style.width = "100%";
-    }
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
 
-    function closeNav() {
-      document.getElementById("myNav").style.width = "0%";
-    }
-  </script>
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
 
 </body>
 
