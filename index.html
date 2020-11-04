@@ -3,64 +3,82 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <script src="https://use.fontawesome.com/75644df8dd.js"></script>
     <link rel="stylesheet" type="text/css" href="/devchallenges-interior-consultant-master/scss/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;400&family=Lora:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <title>Interior Consultant</title>
 </head>
 
 <body>
-    <div class="container">
-        <header class="this-interior">
-            <p>This interior</p>
-        </header>
-        <div class="nav">
-            <p class="nav__item nav__item--active">Home</p>
-            <p class="nav__item">Collection</p>
-            <p class="nav__item">About</p>
-            <p class="nav__item">Contact</p>
-        </div>
-        <div id="myNav" class="overlay" role="navigation">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-                <img src="assets/close-white-24dp.svg ">
-            </a>
-            <div class="overlay-content ">
-                <a href="#">Home</a>
-                <a href="#">Collection</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+
+    <div class="mobile-navigation" id="mobile-navigation">
+        <div class="mobile-navigation--header">
+            <div class="close-button" onclick="toogleMobileNavigation()">
+                <button>
+                    <i class="fa fa-close"></i>
+                </button>
             </div>
+            <a href="" class="mobile-navigation--item mobile-navigation--item__active">Home</a>
+            <a href="" class="mobile-navigation--item">Collection</a>
+            <a href="" class="mobile-navigation--item">About</a>
+            <a href="" class="mobile-navigation--item">Contact</a>
+
         </div>
+    </div>
 
-        <span onclick="openNav()" class="hamburger-icon"><img src="assets/menu-white-24dp.svg "></span>
+    <div id="container">
+        <header>
+            <div class="menu-button" onclick="toogleMobileNavigation()">
+                <button><i class="fa fa-bars"></i></button>
+            </div>
+            <p class="this--interior">This interior</p>
+            <nav class="navigation">
+                <a href="" class="navigation--item navigation--item__active">Home</a>
+                <a href="" class="navigation--item">Collection</a>
+                <a href="" class="navigation--item">About</a>
+                <a href="" class="navigation--item">Contact</a>
+            </nav>
 
-        <p class="title">Modern interior</p>
-        <p class="description">A full-Service residential & commercial interior design and staging company offering professional organizing & <br> eco-services. </p>
+        </header>
 
-        <p class="read-more">Read more</p>
-        <img class="arrow" src="assets/arrow_right_alt-white-18dp.svg">
+        <main>
+            <div class="main--content">
+                <p class="title">Modern interior</p>
+                <p class="description">A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services. </p>
+                <button class="read--more">Read more</button>
+                <img class="arrow" src="assets/arrow_right_alt-white-18dp.svg" alt="arrow">
+            </div>
 
-        <img src="assets/photo1.png" class="interor-image" alt="interior design img">
-        <section class="card">
-            <img class="Aliza-photo" src="assets/photo2.png" alt="Aliza Webber">
-            <p class="nameA">Aliza Webber</p>
-            <p class="occupation">Interior designer</p>
-            <p class="designed-by">Designed in 2020 by <br> Aliza Webber </p>
-        </section>
+            <div class="main--imageSection">
+                <img src="assets/photo1.png" class="interior--image" alt="room with cabinets sofa and big picture on the wall">
+                <div class="card">
+                    <img class="Aliza--photo" src="assets/photo2.png" alt="Aliza Webber">
+                    <p class="nameA">Aliza Webber</p>
+                    <p class="occupation">Interior designer</p>
+                    <p class="designed--by">Designed in 2020 by <br> Aliza Webber </p>
+                </div>
+            </div>
 
-        <hr class="line">
-        <footer><a href="https://github.com/MatejaC/devchallenges-interior-consultant-master ">Mateja Cimpersak @
+        </main>
+
+        <footer>
+            <hr class="line">
+            <a href="https://github.com/MatejaC/devchallenges-interior-consultant-master ">Mateja Cimpersak @
         DevChallenges.io</a></footer>
 
     </div>
 
     <script>
-        function openNav() {
-            document.getElementById("myNav").style.width = "100%";
-        }
-
-        function closeNav() {
-            document.getElementById("myNav").style.width = "0%";
+        function toogleMobileNavigation() {
+            var element = document.getElementById("mobile-navigation");
+            if (element.classList.contains("mobile-navigation__open")) {
+                element.classList.remove("mobile-navigation__open") &&
+                    element.classList.remove("card");
+            } else {
+                element.classList.add("mobile-navigation__open");
+            }
         }
     </script>
 
