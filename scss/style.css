@@ -241,10 +241,10 @@ main {
   display: flex;
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: 600;
-  margin-bottom: 42px;
   padding: 4px;
+  margin-bottom: 1.5rem;
   background: transparent;
   outline: none;
   border: none;
@@ -257,9 +257,8 @@ main {
 }
 
 .arrow {
-  margin: -2.5rem 0rem 0rem -2.2rem;
+  margin: -1.4rem 0rem 0rem 0.2rem;
   font-weight: 600;
-  font-size: 18px;
   line-height: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -317,7 +316,7 @@ main {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
-  width: 50%;
+  width: 57%;
   max-width: 100vh;
   border-radius: 50%;
   padding: .7rem;
@@ -338,7 +337,7 @@ main {
   font-size: 0.8rem;
   line-height: 1rem;
   font-weight: 500;
-  margin: .85rem 0rem 0rem -4rem;
+  margin: 1rem 0rem 1rem -3.1rem;
 }
 
 .occupation {
@@ -350,7 +349,7 @@ main {
   grid-row: 2 / 3;
   font-size: 0.75rem;
   line-height: 0.8rem;
-  margin: -2.7rem 0rem 0rem -4rem;
+  margin: -3.1em 0rem 0rem -3.2rem;
   font-family: "Montserrat", sans-serif;
   color: #828282;
   font-weight: 500;
@@ -367,6 +366,7 @@ main {
   font-weight: normal;
   font-family: "Lora", serif;
   color: #ffffff;
+  margin: -0em 0rem 0rem 1rem;
 }
 
 .line {
@@ -385,8 +385,8 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 600;
-  font-size: 0.85rem;
-  line-height: 0.9rem;
+  font-size: 0.75rem;
+  line-height: 0.8rem;
   margin: 1.8rem 0 3rem 0;
 }
 
@@ -400,7 +400,6 @@ footer a {
 }
 
 .menu-button {
-  cursor: pointer;
   display: none;
   top: 4vw;
   right: 4vw;
@@ -509,7 +508,7 @@ footer a {
   font-weight: 700;
 }
 
-@media only screen and (max-device-width: 660px) {
+@media only screen and (max-device-width: 600px) {
   #container,
   main,
   .main--content {
@@ -521,8 +520,9 @@ footer a {
     margin-bottom: 2rem;
   }
   .interior--image {
-    display: block;
-    width: 105%;
+    width: 110%;
+    padding: 0;
+    margin: -2rem 0rem 0rem -2rem;
   }
   .main--content {
     margin-bottom: 0;
@@ -547,15 +547,30 @@ footer a {
     border: none;
   }
   .arrow {
-    margin: -4rem 0rem 0rem 6.5rem;
+    margin: -2.7rem 0rem 0rem 6rem;
+  }
+  .card {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0rem;
+    margin: -2.8rem -4rem 0rem .7rem;
+    width: 89%;
+  }
+  .designed--by {
+    font-size: 18px;
   }
   .line {
-    margin: 8rem 2rem 1rem 2rem;
+    display: block;
+    margin: 1.7rem 2rem .7rem 2rem;
     text-align: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border-top: 0.05rem solid #a9a9a9;
+    border: 0.05rem solid #a9a9a9;
   }
 }
 
