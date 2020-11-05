@@ -117,7 +117,7 @@ html {
 
 #container {
   max-width: 768px;
-  padding: 3rem;
+  padding: 1.2rem 0.75rem;
   margin: 0 auto;
   height: 100vh;
   display: -webkit-box;
@@ -363,7 +363,7 @@ main {
   grid-column: 1 / 3;
   font-size: 1.2rem;
   line-height: 1.6rem;
-  font-weight: normal;
+  font-weight: 700;
   font-family: "Lora", serif;
   color: #ffffff;
   margin: -0em 0rem 0rem 1rem;
@@ -403,10 +403,10 @@ footer a {
   display: none;
   top: 4vw;
   right: 4vw;
-  z-index: 20;
+  border: none;
 }
 
-.menu-button.active {
+.menu-button:active, .menu-button:hover, .menu-button:focus {
   border: none;
 }
 
@@ -418,7 +418,7 @@ footer a {
   right: 4vw;
 }
 
-.menu-button button.active {
+.menu-button button:active, .menu-button button:hover, .menu-button button:focus {
   border: none;
 }
 
@@ -519,10 +519,14 @@ footer a {
         align-content: space-between;
     margin-bottom: 2rem;
   }
+  .main--imageSection {
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+  }
   .interior--image {
-    width: 110%;
-    padding: 0;
-    margin: -2rem 0rem 0rem -2rem;
+    width: 100%;
+    padding: 0.4rem;
+    margin: 0;
   }
   .main--content {
     margin-bottom: 0;
@@ -541,9 +545,8 @@ footer a {
     border: none;
     top: 4vw;
     right: 4vw;
-    z-index: 20;
   }
-  .menu-button.active, .menu-button.hover {
+  .menu-button:active, .menu-button:hover, .menu-button:focus {
     border: none;
   }
   .arrow {
@@ -557,20 +560,36 @@ footer a {
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 0rem;
-    margin: -2.8rem -4rem 0rem .7rem;
-    width: 89%;
+    margin: -3.5rem 0rem 0rem 3rem;
+    width: 80%;
+  }
+  .Aliza--photo {
+    width: 42%;
+    max-width: 100vh;
+    border-radius: 50%;
+    padding: .8rem;
+    margin: 0rem 0rem 0rem 0.3rem;
+  }
+  .nameA {
+    margin: 1rem 0rem 1rem -4.5rem;
+  }
+  .occupation {
+    margin: -2em 0rem 0rem -4.5rem;
   }
   .designed--by {
-    font-size: 18px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.4rem;
+    margin: 0.5rem 0rem 1rem 1.2rem;
   }
   .line {
     display: block;
-    margin: 1.7rem 2rem .7rem 2rem;
+    margin: 1.7rem 3.2rem -.8rem 3.2rem;
     text-align: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border: 0.05rem solid #a9a9a9;
+    border-top: 0.05rem solid #a9a9a9;
   }
 }
 
@@ -692,9 +711,10 @@ footer a {
     grid-column: 1 / 3;
     font-size: 1.2rem;
     line-height: 1.6rem;
-    font-weight: normal;
+    font-weight: 700;
     font-family: "Lora", serif;
     color: #ffffff;
+    font-weight: 700;
     margin: -0em 0rem 0rem 1rem;
   }
   .line {
@@ -706,13 +726,13 @@ footer a {
   #container {
     max-width: 1430px;
     margin: 0 auto;
-    padding: 2.6rem 6rem;
+    padding: 2.6rem 5rem;
   }
   main {
     margin-top: 3rem;
   }
   .main--content {
-    margin-bottom: 10rem;
+    margin-bottom: 16rem;
   }
   .title {
     font-size: 3rem;
@@ -725,8 +745,74 @@ footer a {
     font-size: 1.5rem;
     margin-right: 3rem;
   }
+  .arrow {
+    margin: -1.2rem 0rem 0rem -8.5rem;
+  }
   .main--imageSection {
     margin-top: 6rem;
+  }
+  .card {
+    width: 55%;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -ms-grid-rows: auto 1fr;
+        grid-template-rows: auto 1fr;
+    z-index: 2;
+    margin: -4.2em 0rem 0rem 16.2rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(2rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+  }
+  .Aliza--photo {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    width: 42%;
+    max-width: 100vh;
+    padding: 1rem;
+    margin: 0rem 0rem 0.3rem 0rem;
+  }
+  .nameA {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin: 1.3rem 0rem 1rem -6.2rem;
+  }
+  .occupation {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    font-size: 0.75rem;
+    line-height: 0.8rem;
+    margin: -3.1em 0rem 0rem -6.2rem;
+  }
+  .designed--by {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    font-weight: 700;
+    margin: -0em 0rem 0rem 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
