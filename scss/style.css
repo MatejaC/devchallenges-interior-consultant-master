@@ -485,8 +485,8 @@ footer a {
   background-color: transparent;
   font-size: 1.2rem;
   position: fixed;
-  top: -.1vw;
-  right: .4vw;
+  top: 2vw;
+  right: 0vw;
   z-index: 20;
 }
 
@@ -513,6 +513,9 @@ footer a {
   main,
   .main--content {
     display: block;
+  }
+  #container {
+    padding: 1.2rem 1.2rem;
   }
   header {
     -ms-flex-line-pack: justify;
@@ -541,7 +544,7 @@ footer a {
   }
   .menu-button {
     display: block;
-    position: fixed;
+    position: flex;
     border: none;
     top: 4vw;
     right: 4vw;
@@ -571,10 +574,10 @@ footer a {
     margin: 0rem 0rem 0rem 0.3rem;
   }
   .nameA {
-    margin: 1rem 0rem 1rem -4.5rem;
+    margin: 1rem 0rem 1rem -4.4rem;
   }
   .occupation {
-    margin: -2em 0rem 0rem -4.5rem;
+    margin: -.95rem 0rem 0rem -4.45rem;
   }
   .designed--by {
     font-size: 1.1rem;
